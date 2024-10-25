@@ -1,0 +1,103 @@
+*{margin: 0;padding:0;}
+#wrap{
+    width:1000px;
+    height:650px;
+}
+ul{list-style:none;}
+a{text-decoration:none;color:#333;}
+h1{
+    margin-left: 50px ;
+    margin-top: 20px;
+}
+
+header{
+    width: 200px;
+    height:650px;
+    background-color: pink;
+    float:left;
+}
+.gnb li a{
+    display: block;
+    width: 190px;
+    height:60px;
+    line-height: 40px;
+    background-color: #ccc;
+    text-indent: 20px;
+    /* 들여쓰기 */
+  
+}
+.gnb{
+    height: 250px;
+    width: 190px;
+    border: 1px solid #000;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+   
+}
+.gnb>li>a{
+    background-color: pink;
+    color: #333;
+   
+    
+    
+}
+.gnb li ul{
+    position: absolute;
+    top:0;
+    left:150px;
+    display: none;
+}
+.gnb li:hover ul{
+    display: block;
+}
+
+
+
+#main{
+    width:800px;
+    height:650px;
+    background-color: hotpink;
+    float:left;
+}
+#main #img_slide{
+    width: 100%;
+    height:350px;
+    background-color: aqua;
+}
+section{
+    width: 100%;
+    height:200px;
+    background-color: yellow;
+}
+section article{
+    width:33.33%;
+    height:200px;
+    float: left;
+}
+section article.notice{background-color: tan;}
+section .banner{background-color: orange;}
+.icons{background-color: yellowgreen;}
+footer{
+    width:100%;
+    height:100px;
+    background-color: yellow;
+}
+footer .f_logo{
+    width:150px;
+    height:100px;
+    background-color: #999;
+}
+footer .f_menu{
+    width:650px;
+    height:50px;
+    background-color: #777;
+}
+footer .f_copy{
+    width:650px;
+    height:50px;
+    background-color: #555;
+}
+footer article{
+    float: left;
+}

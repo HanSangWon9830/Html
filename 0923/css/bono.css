@@ -1,0 +1,60 @@
+*{margin: 0; padding: 0;}
+.bigbox{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 1px solid #333;
+    margin: 100px auto 0; /*좌우 중앙 정렬*/
+    .face{
+        position: absolute;
+        width: 500px;
+        height: 500px; 
+        border-radius: 50%;
+        background-color: #3281f8;
+        bottom: 0;
+        border:10px solid #333;
+        box-sizing: border-box;
+        /*선두께 포함 500 * 450*/
+        .eyeball{
+            width: 30px;
+            height: 30px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            background-color: #000;
+            position: absolute;
+            top: 190px;
+        }
+        .eyeball.left{left: 80px; top: 150px;}
+        .eyeball.right{right: 80px; top: 150px;}
+        .nose{
+            width:40px; height: 40px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            background-color: #000;
+            position: absolute;
+            top:300px;
+            left:50%;
+            margin-left: -20px;
+            /* 좌우에 중앙정령 left:50%
+            넓이 40px에 절반인 margin-left: -20px */
+            z-index: 1;
+        }
+        .mouth{
+            width:120px;
+            height:80px;
+            border:2px solid #000;
+            box-sizing: border-box;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top:320px;
+           
+        }
+        .mouth.left{left:210px;
+            transform: rotate(45deg);
+        }
+        .mouth.right{
+            right:210px;
+            transform: rotate(135deg);
+        }
+        

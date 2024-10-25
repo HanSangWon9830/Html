@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+*{margin: 0; padding: 0;}
+body{background: #252422}
+#main{
+    width: 395px;
+    height: 160px;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+dl{
+    width: 395px;
+    height: 160px;
+}
+
+dt{
+    width: 25px;
+    height: 160px;
+    float: left;
+}
+dt span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+}
+dt#meun1 span{
+            background: url(../베스킨/blue01.png) no-repeat 0 0;
+        }
+dt#meun2 span{
+            background: url(../베스킨/blue01.png) no-repeat 0 0;
+        }
+dt#meun3 span{
+            background: url(../베스킨/blue01.png) no-repeat 0 0;
+        }
+
+
+
+dt#meun1 span.selected{
+            background: url(../베스킨/orange01.png) no-repeat 0 0;
+        }
+dt#meun2 span.selected{
+            background: url(../베스킨/orange01.png) no-repeat 0 0;
+        }
+dt#meun3 span.selected{
+            background: url(../베스킨/orange01.png) no-repeat 0 0;
+        }
+
+
+dt#meun1 span.over {
+            background: url(../베스킨/pink01.png) no-repeat 0 0;
+        }
+
+dt#meun2 span.over {
+            background: url(../베스킨/pink01.png) no-repeat 0 0;
+        }
+
+dt#meun3 span.over {
+            background: url(../베스킨/pink01.png) no-repeat 0 0;
+        }
+dd{
+    width: 320px;
+    height: 160px;
+    float: left;
+    background-color: red;
+    transition: width 0.5s;
+}
+dd img{
+    width: 320px;
+    height: 160px;
+}
+dd{
+    width: 320px;
+}
+dd:nth-of-type(1){
+    width: 320px;
+}
+    </style>
+
+<script>
+    $(function () {
+        // $('dd:not(:first)').css('width','0px');
+        $('dt:first span').addClass('selected');
+
+        $('dl dt').click(function(){
+            var kkk = $(this).next('dd').css('width');
+            alert(kkk);
+            if(kkk == '0px'){//닫혀 있다면
+                $('dd').css('width','0px');
+                $(this).next('dd').css('width','320px');
+                $('dt span').removeClass('selected'); 
+                $(this).find('span').addClass('selected');
+            }
+        });
+
+        $('dl dt').hover(function(){
+            $(this).find('span').addClass('over');
+
+        },function(){
+            $(this).find('span').removeClass('over');
+
+        });
+
+
+    });
+
+
+</script>
+
+</head>
+<body>
+    
+    <div id="main">
+        <dl>
+            <dt id="meun1"><span>meun1</span></dt>
+            <dd>
+                <img src="../베스킨/menuimg01.jpg" alt="">
+            </dd>
+            <dt id="meun2"><span>meun2</span></dt>
+            <dd>
+                <img src="../베스킨/menuimg02.jpg" alt="">
+            </dd>
+            <dt id="meun3"><span>meun3</span></dt>
+            <dd>
+                <img src="../베스킨/menuimg03.jpg" alt="">
+            </dd>
+        </dl>
+    </div>
+</body>
+</html>

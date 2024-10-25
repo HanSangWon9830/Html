@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}.wrap{
+    width: 900px;
+    margin: 0 auto;
+    /* 전체 중앙 정렬 */
+}
+header{
+    position: relative;
+    /* 부모 (position)에게 relative를 주면 
+    밑에 자식에게 (position) absolute부여하면
+    top bottom left right부여가능 */
+    height: 300px;
+    background: url(../images/top.jpg) 0 30%/ cover;
+    /* cover앞에 /슬레시 써야함 */
+}
+.logo{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    color: #fff;
+}
+nav{
+    width: 900px;
+    height: 70px;
+    background-color: #2a1d0a;
+}
+nav ul{
+    list-style: none;
+
+}
+nav ul li{
+    float: left;
+    background-color: #2a1d0a;
+    margin-left: 25px;
+    margin-top: 15px;
+    
+}
+nav ul li a{
+    display: block;
+    /* a인라인 요소 width,height를 적용하기 위해 블럭요소로 변경 */
+    width: 150px;
+    height: 40px;
+    line-height: 40px; /*줄간격 세로 중앙정렬*/
+    border: 1px solid #fff;
+    text-align: center; /*가로 중앙정렬*/
+    border-radius: 20px; /*모서리 둥글게*/
+    text-decoration: none; /*밑줄없애기*/
+    color: wheat;
+    font-weight: bold; /*글자 진하게*/
+}
+/* 태그에 마수으 올렸을때 */
+nav ul li a:hover{
+    background-color: #fff;
+    color: #000;
+    text-decoration: underline; /*밑줄*/
+}
+.content{
+    /* height: 550px; 또는*/
+    overflow: hidden;
+}
+section{
+    width: 650px;
+    height: 550px;
+    background-color: #ccc;
+    float: left;
+}
+aside{
+    width: 250px;
+    height: 550px;
+    background-color: #726054;
+    float: left;
+    text-align: center;
+    
+}
+aside img{
+    width: 220px;
+    padding: 10px;
+    padding-bottom: 20px;
+
+}
+aside h3{
+    margin-top: 10px;
+}
+footer{
+    
+    height: 60px;
+    line-height: 60px;
+    background-color: #333;
+    color: #fff;
+    /* margin-top: 100px; */
+    text-align: center;
+}
+section h3{
+    padding: 10px 0;
+    text-align: center;
+
+}
+section article{
+
+    width: 270px;
+    height: 200px;
+    border: 1px solid #333;
+    float: left;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+article h4{
+    background: url(../images/kong.png)no-repeat;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+article p{
+    line-height: 170%;
+    text-align: justify;
+}

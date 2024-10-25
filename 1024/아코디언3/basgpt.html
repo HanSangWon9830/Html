@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Menu</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body { background: #252422; }
+        #main {
+            width: 395px;
+            height: 160px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        dl {
+            width: 395px;
+            height: 160px;
+        }
+        dt {
+            width: 25px;
+            height: 160px;
+            float: left;
+        }
+        dt span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+            background: url(../베스킨/blue01.png) no-repeat 0 0;
+        }
+        dt span.selected {
+            background: url(../베스킨/orange01.png) no-repeat 0 0;
+        }
+        dt span.over {
+            background: url(../베스킨/pink01.png) no-repeat 0 0;
+        }
+        dd {
+            width: 320px;
+            height: 160px;
+            float: left;
+            background-color: red;
+            transition: width 0.5s;
+            overflow: hidden; /* 추가하여 내용이 잘리지 않게 함 */
+        }
+        dd img {
+            width: 100%; /* 반응형 이미지 */
+            height: 100%; /* 반응형 이미지 */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $('dd:not(:first)').css('width', '0px'); // 첫 번째 dd만 보이게
+            $('dt:first span').addClass('selected');
+
+            $('dt').click(function() {
+                var $nextDD = $(this).next('dd');
+                var isClosed = $nextDD.css('width') === '0px';
+
+                // 모든 dd를 닫고 클릭한 dd를 열기
+                $('dd').css('width', '0px');
+                if (isClosed) {
+                    $nextDD.css('width', '320px');
+                }
+
+                $('dt span').removeClass('selected');
+                if (isClosed) {
+                    $(this).find('span').addClass('selected');
+                }
+            });
+
+            $('dt').hover(function() {
+                $(this).find('span').addClass('over');
+            }, function() {
+                $(this).find('span').removeClass('over');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="main">
+        <dl>
+            <dt id="meun1"><span>Menu 1</span></dt>
+            <dd>
+                <img src="../베스킨/menuimg01.jpg" alt="Menu Item 1">
+            </dd>
+            <dt id="meun2"><span>Menu 2</span></dt>
+            <dd>
+                <img src="../베스킨/menuimg02.jpg" alt="Menu Item 2">
+            </dd>
+            <dt id="meun3"><span>Menu 3</span></dt>
+            <dd>
+                <img src="../베스킨/menuimg03.jpg" alt="Menu Item 3">
+            </dd>
+        </dl>
+    </div>
+</body>
+</html>
