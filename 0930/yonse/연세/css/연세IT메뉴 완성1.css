@@ -50,11 +50,11 @@ nav{
     overflow: hidden;
 }
 nav:hover{
-    height:261px;
-    border-bottom:1px solid #333;
+    height:300px;
+    /* border-bottom:1px solid #333; */
 }
 nav>ul{
-    border-bottom:1px solid #333;
+    /* border-bottom:1px solid #333; */
     text-align: center;
    
 }
@@ -85,7 +85,6 @@ nav ul li ul{
     position: absolute;
     top:61px;
     height:200px;
-  
     background-color: #fff;
     border-right: 1px solid #333;
 }
