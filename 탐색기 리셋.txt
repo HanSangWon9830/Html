@@ -1,0 +1,4 @@
+파일명 앞에 바뀌어서 난리났을때 
+컨트롤 쉬프트 p 눌러서 커멘드창에
+View: Reset View Locations
+입력해서 초기화
