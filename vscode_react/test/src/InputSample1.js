@@ -6,7 +6,7 @@ function InputSample1(){
     });
     const {name, nickname} = inputs; //비구조화 할당을 통해 값 추출
     const onChange = (e) =>{ 
-       const {value, name} = e.target; // 우선   e.target에서 name과 value를 추출
+       const {value, name} = e.target; // 우선 e.target 에서 name과 value를 추출
         setInputs({
             ...inputs, //기존의 input객체를 복사한뒤 
             [name]:value // name 키를 가지 값을 value 로 설정
