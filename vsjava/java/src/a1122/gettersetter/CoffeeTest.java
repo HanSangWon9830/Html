@@ -6,9 +6,8 @@ public class CoffeeTest {
         // 현재의 커피이름과 가격을 출력해 보세요
         System.out.printf("%s(%d원) ->", c.getName(), c.getPrice());
         // 가격을 500원 인상해 주세요
-        c.setPrice(c.getPrice()+500); //500원 가격인상
-        System.out.printf("%s(%d원)\n", c.getName(), c.getPrice());
-
+        c.setPrice(c.getPrice()+ 500); //500원 가격인상
+        System.out.printf("인상된가격 %s(%d원)\n", c.getName(), c.getPrice()); 
     }
 }
 class Coffee{
