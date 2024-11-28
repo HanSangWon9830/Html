@@ -27,7 +27,7 @@ public class Raichu extends Pikachu {
 
         @Override
         public String toString() {
-            return super.toString() + "cAttack()=" + cAttack();
+            return super.toString() + ", cAttack()=" + cAttack();
         }
 
         public String  cAttack(){

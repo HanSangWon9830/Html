@@ -23,6 +23,7 @@ class Printer{
     public void println(String value){
         System.out.println(value);
     }
-    //println() 메서드를 각각 int, boolean, double, String타입에 대해 오버로딩하여 선언
+    //println() 메서드를 각각 int , boolean, double,String 타입데 대해 
+    //오버로딩하여 선언
 
 }

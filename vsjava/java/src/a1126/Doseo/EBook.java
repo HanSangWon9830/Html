@@ -20,6 +20,7 @@ public class EBook extends Book {
     public void setFormat(String format) {
         this.format = format;
     }
+    
     @Override
     public void displayInfo() {
         super.displayInfo();
