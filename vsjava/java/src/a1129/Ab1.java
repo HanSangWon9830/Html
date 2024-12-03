@@ -14,19 +14,17 @@ class Cat extends Animal {
         System.out.println("나용나용!!");     
     }   
 }
-
-
-class Dog extends Animal {
-
+class Dog extends Animal{
     @Override
     void cry() {
-        System.out.println("멍멍멍");     
-    }   
+      System.out.println("멍멍");        
+    }    
 }
 
-public class Ab1{
+
+public class Ab1 {
     public static void main(String[] args) {
-        //Animal a = new Animal(); 추상클래스는 인스턴스(객체) 생성금지
+        // Animal a = new Animal(); 추상클래스는 인스턴스(객체)생성금지
         Cat c = new Cat();
         Dog d = new Dog();
         c.cry();
@@ -34,7 +32,8 @@ public class Ab1{
         Animal e = new Cat();
         Animal f = new Dog();
 
-        e.cry(); //자식을 부모 타입으로 업캐스팅 후
-        f.cry(); //다향성
+        e.cry(); //자식을 부모타입으로 업캐스팅 후 cry메서드 호출(다운캐스팅 안해도됨)
+        f.cry(); //다형성
+
     }
 }
